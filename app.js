@@ -29,7 +29,7 @@ else { tmpVar = 'deployed' ;}
 if ( depType === 'deploy' ) {
 var finaltxt = txt.substr(7,txt.length);
 request.post(
-//    'http://52.79.92.144:8080/generic-webhook-trigger/invoke?token=deploy_tkn',
+    'JENKINS_URL/generic-webhook-trigger/invoke?token=deploy_tkn',
     { json: { 'svcName': finaltxt, 'depType': depType } },
     function (error, response, body) {
         if (!error && response.statusCode == 200) {
@@ -41,7 +41,7 @@ request.post(
 else if (depType === 'build') { 
 var finaltxt = txt.substr(6,txt.length);
 request.post(
-//    'http://52.79.92.144:8080/generic-webhook-trigger/invoke?token=build_tkn',
+    'JENKINS_URL/generic-webhook-trigger/invoke?token=build_tkn',
     { json: { 'svcName': finaltxt, 'depType': depType } },
     function (error, response, body) {
         if (!error && response.statusCode == 200) {
@@ -53,7 +53,7 @@ request.post(
 else {
 var finaltxt = txt.substr(13,txt.length);
 request.post(
-//    'http://52.79.92.144:8080/generic-webhook-trigger/invoke?token=build_tkn',
+    'JENKINS_URL/generic-webhook-trigger/invoke?token=build_tkn',
     { json: { 'svcName': finaltxt, 'depType': depType } },
     function (error, response, body) {
         if (!error && response.statusCode == 200) {
