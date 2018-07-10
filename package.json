@@ -1,0 +1,12 @@
+{
+  "name": "SlJk_Bot",
+  "version": "0.0.1",
+  "description": "Node server for Jenkins",
+  "main": "app.js",
+  "author": "Adithya",
+  "dependencies": {
+    "express": "^4.x.x",
+    "body-parser": "^1.x.x",
+    "request": "2.56.x"
+  }
+}
